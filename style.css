@@ -44,7 +44,8 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth; }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
@@ -8136,7 +8137,7 @@ body {
   font-family: "Montserrat", Arial, sans-serif;
   background: #fff;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.6;
   font-weight: 400;
   color: #999999; }
   body.menu-show {
@@ -8580,9 +8581,18 @@ h1, h2, h3, h4, h5,
   border-radius: 3px;
   -webkit-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
   -moz-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
-  box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09); }
+  box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
   .btn:hover, .btn:active, .btn:focus {
-    outline: none; }
+    outline: none;
+    -webkit-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    transform: translateY(-2px);
+    -webkit-box-shadow: 0px 26px 38px -11px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 26px 38px -11px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 26px 38px -11px rgba(0, 0, 0, 0.12); }
   .btn.btn-primary {
     background: #323edd !important;
     border: 1px solid #323edd !important;
@@ -8619,7 +8629,16 @@ h1, h2, h3, h4, h5,
   display: block;
   overflow: hidden;
   z-index: 0;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .project:hover {
+    -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
   .project .img {
     position: relative;
     overflow: hidden;
@@ -9828,6 +9847,21 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+@media (max-width: 767.98px) {
+  .ftco-footer .ftco-footer-widget {
+    text-align: center;
+  }
+  .ftco-footer .ftco-footer-widget .list-unstyled {
+    padding: 0;
+  }
+  .ftco-footer .ftco-footer-widget .ftco-footer-social {
+    justify-content: center;
+  }
+  .ftco-footer .block-23 ul {
+    padding: 0;
+  }
+}
 
 @keyframes loader-dash {
   0% {
